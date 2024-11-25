@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'codefont';
+    src: url('../res/consolas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#code {
+    white-space: pre-wrap;
+    padding-bottom: 4%;
+    font-size: 0.9em;
+}
+
+body {
+    color: white;
+    margin-top: 2%;
+    overflow-x: hidden;
+    font-family: codefont;
+    background-color: #121185;
+}
+
+audio {
+    display: none;
+}
+
+.main {
+    color: white;
+    padding-left: 2%;
+}

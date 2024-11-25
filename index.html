@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница, иерархия условна</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="icon" type="image/gif" href="res/icon.gif">
+</head>
+
+<body class="content">
+    <div class="main">
+        <div class="home">
+            <p></p>
+            <p>cd test/one</p>
+        </div>
+        <div class="testone">
+            <p></p>
+            <p>python3 maint.py</p>
+            <p style="color: red;">python3: can't open file
+                '/home/test/one/maint.py':
+                [Errno 2] No such file or directory</p>
+            <p>python3 main.py</p>
+            <pre>
+   _____              _____                       _   _      _   
+  |  __ \            / ____|                     | \ | |    | |  
+  | |  | | _____   _| |  __ _ __ ___  _   _ _ __ |  \| | ___| |_ 
+  | |  | |/ _ \ \ / / | |_ | '__/ _ \| | | | '_ \| . ` |/ _ \ __|
+  | |__| |  __/\ V /| |__| | | | (_) | |_| | |_) | |\  |  __/ |_ 
+  |_____/ \___| \_/  \_____|_|  \___/ \__,_| .__/|_| \_|\___|\__|
+                                           | |                   
+                                           |_|</pre>
+            <p style="display: flex;"><span>&nbsp;python3 music.py</span> <span id="changing-text"
+                    style="text-align: center; min-width: 50px;"></span></p>
+            <div style="font-family:'codemonofont' monospace; text-align: center; width: 50px;" id="changing-text">
+            </div>
+            <div style="display: flex; gap: 1%;">
+                <div class="play-button" onclick="document.getElementById('audio').play()">
+                    <pre>╔═══════════════╗
+║Включить музыку║
+╚═══════════════╝</pre>
+                </div>
+                <div class="stop-button"
+                    onclick="document.getElementById('audio').pause(); document.getElementById('audio').currentTime = 0;">
+                    <pre>╔════════════════╗
+║Выключить музыку║
+╚════════════════╝</pre>
+                </div>
+            </div>
+            <audio id="audio" preload="auto">
+                <source src="res/music.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает элемент audio, лол!
+            </audio>
+            <audio id="sound" preload="auto">
+                <source src="res/sound.wav" type="audio/wav">
+                Ваш браузер не поддерживает элемент audio, лол!
+            </audio>
+            <p>python3 links.py</p>
+            Другие страницы:
+            <ul>
+                <li>
+                    <a href="bluescreen.html" class="link">страница номер 2</a>
+                </li>
+                <li>
+                    <a href="gallery.php" class="link">Галерея</a>
+                </li>
+            </ul>
+            <p></p>
+        </div>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+
+</body>
+
+</html>

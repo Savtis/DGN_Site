@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'codefont';
+    src: url('../res/code.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'codemonofont';
+    src: url('../res/codemono.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li::before {
+    content: '>';
+    margin-right: 5px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: codefont;
+    background-color: black;
+    cursor: url('../res/cursor.png'), auto;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease;
+}
+
+.shifted {
+    transform: translate(3%, 5%);
+}
+
+
+audio {
+    display: none;
+}
+
+.play-button,
+.stop-button {
+    font-family: 'codemonofont', monospace;
+    background-color: black;
+    border: none;
+    color: lime;
+    font-size: 1.2em;
+    cursor: url('../res/cursor-click.png'), pointer;
+    text-align: left;
+}
+
+.stop-button {
+    color: red;
+}
+
+.play-button:hover {
+    color: darkgreen;
+}
+
+.stop-button:hover {
+    color: darkred;
+}
+
+.main {
+    color: lime;
+    padding-left: 2%;
+}
+
+.home p::before {
+    content: "/home $ ";
+}
+
+.testone p::before {
+    content: "/home/test/one $ ";
+}
+
+.link {
+    color: lime;
+    text-decoration: underline;
+    cursor: url('../res/cursor-click.png'), pointer;
+}
+
+.link:hover {
+    color: darkgreen;
+    text-decoration: none;
+}

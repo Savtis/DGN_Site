@@ -3,7 +3,7 @@
 async function loadCode() {
     const randomChars = "ъхзщшгнекуцйэждлорпавыф.юбьтимсчя=-0987654321ё\\][poiuytrewqasdfghjkl;'/.,mnbvcxz0987654321▲▨▽◁◐◑◒◓◔◕◖ѬѲѾҦӨΣɰ𮯠𬺡𫠝"
     const l = randomChars.length
-    const response = await fetch('./scripts/program');
+    const response = await fetch('scripts/program');
     const text = await response.text();
     let chance = 0.0;
 

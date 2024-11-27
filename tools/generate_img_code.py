@@ -10,7 +10,7 @@ for f in filenames:
     if f != 'tech_russia.png':
         result.append(f'<a href=\"res/gallery/{f}\" target=\"_blank\"><img src=\"res/gallery/{f}\" alt=\"Картинко\"></a>')
     else:
-        result.append(f'<a href=\"technocracy.html\" target=\"_blank\"><img src=\"res/gallery/{f}\" alt=\"Картинко\"></a>')
+        result.append(f'<a href=\"technocracy.html\"><img src=\"res/gallery/{f}\" alt=\"Картинко\"></a>')
 
 result.reverse()
 

@@ -82,7 +82,8 @@ document.addEventListener('click', function () {
         "вступи в Cuplarax - отупи человечество",
         "STOUT SHAKO FOR 2 REFINED",
         "продам гараж",
-        ":D"
+        ":D",
+        "Займись делом - растяни фимоz"
     ];
 
     let current_text_i = 0;
@@ -149,6 +150,6 @@ setInterval(() => {
         setTimeout(() => {
             removeGlitch();
             clicked = false;
-        }, 200);
+        }, 150);
     }
 }, 1000);

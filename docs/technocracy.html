@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/tech.css">
+    <link rel="icon" type="image/gif" href="res/icon.gif">
+    <title>Ядерный мир победил</title>
+</head>
+
+<body>
+    <div class="flag">
+        <div class="stripe white"></div>
+        <div class="stripe blue"></div>
+        <div class="stripe red"></div>
+    </div>
+    <div class="container">
+        <h1 id="request"></h1>
+        <img src="res/rad.svg" alt="Солнышко" class="sun">
+        <img src="res/round.svg" alt="ААА" class="round">
+        <img src="res/gear.svg" alt="Шестерня" class="gear">
+    </div>
+    <audio id="music" preload="auto">
+        <source src="res/techfun.wav" type="audio/mpeg">
+    </audio>
+    <script>
+        let ticks = 10;
+        const text = 'нажми куда-нибудь';
+        const buf = document.getElementById("request");
+
+        int = setInterval(() => {
+            if (ticks < 10) {
+                buf.innerHTML = text;
+            } else if (ticks < 16) {
+                buf.innerHTML = '';
+            } else {
+                ticks = 0;
+            }
+            ticks++;
+        }, 80);
+
+        audio = document.getElementById("music");
+        audio.loop = true;
+        function playsound() {
+            clearInterval(int);
+            buf.remove();
+            audio.play();
+        }
+        document.addEventListener('click', playsound);
+        document.addEventListener('keypress', playsound);
+        audio.addEventListener('ended', function () {
+            audio.currentTime = 0;
+            audio.play();
+        });
+
+    </script>
+</body>
+
+</html>

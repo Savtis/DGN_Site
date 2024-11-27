@@ -27,21 +27,31 @@ body {
     justify-content: center;
 }
 
-.gallery img {
+.gallery a {
     margin: 0.6%;
     max-width: 30%;
     max-height: 40vh;
     transition: transform 0.35s ease;
     border-radius: 3%;
+    padding: 7px;
     object-fit: contain;
     display: block;
     align-self: center;
-    padding: 5px;
     background-color: lime;
     cursor: url('../res/cursor-click.png'), auto;
 }
 
+.gallery img {
+    max-height: 40vh;
+    transition: transform 0.35s ease;
+    border-radius: 3%;
+}
+
 .gallery img:hover {
+    border-radius: 0%;
+}
+
+.gallery a:hover {
     background-color: transparent;
     transform: scale(1.1) translateY(-10px);
     border-radius: 0%;

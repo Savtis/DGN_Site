@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'codefont';
+    src: url('../res/code.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.flag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.stripe {
+    height: 33.33%;
+}
+
+.white {
+    background-color: white;
+}
+
+.blue {
+    background-color: #0033ff;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.round {
+    position: absolute;
+    z-index: 10;
+    width: 94vh;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.gear {
+    position: absolute;
+    z-index: 25;
+    width: 82vh;
+    height: auto;
+    display: block;
+    margin: auto;
+    animation: gear_rotate 10s linear infinite;
+}
+
+.sun {
+    z-index: 20;
+    width: 72vh;
+    height: auto;
+    display: block;
+    margin: auto;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gear_rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+#request {
+    font-family: codefont;
+    z-index: 50;
+    position: absolute;
+    font-size: 10vh;
+    margin-bottom: 40%;
+}

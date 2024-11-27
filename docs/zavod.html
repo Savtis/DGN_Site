@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смена изображений</title>
+    <style>
+        #slideshow {
+            max-width: 600px; /* Задайте нужные размеры */
+            margin: auto;
+            position: relative;
+        }
+        #slideshow img {
+            width: 100%;
+            display: none; /* Скрываем все изображения по умолчанию */
+        }
+        #slideshow img.active {
+            display: block; /* Показываем активное изображение */
+        }
+    </style>
+</head>
+<body>
+
+<div id="slideshow">
+    <img src="res/zavod/missle/frame0.png" alt="Изображение" class="active">
+    <img src="res/zavod/missle/frame1.png" alt="Изображение">
+    <img src="res/zavod/missle/frame2.png" alt="Изображение">
+    <img src="res/zavod/missle/frame3.png" alt="Изображение">
+</div>
+
+<script src="scripts/zavod/sounds.js"></script>
+<script src="scripts/zavod/main.js"></script>
+
+<script>
+
+    let currentIndex = 0;
+    const images = document.querySelectorAll("#slideshow img");
+    const totalImages = images.length;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove("active"); // Скрываем текущее изображение
+        currentIndex = (currentIndex + 1) % totalImages; // Вычисляем индекс следующего изображения
+        images[currentIndex].classList.add("active"); // Показываем следующее изображение
+    }
+
+    setInterval(showNextImage, 400);
+</script>
+
+</body>
+</html>

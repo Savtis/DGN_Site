@@ -70,7 +70,7 @@ document.addEventListener('click', function () {
         "голые тёлки",
         "yay -S windows",
         "хе-хе-хе-хе-хе-хе",
-        "python Dwarf_Fortress.py",
+        "python3 Dwarf_Fortress.py",
         "Спаси и Сохрани",
         "тебе не кажется, что за тобой следят?",
         "все вымрут, а я останусь",
@@ -83,7 +83,17 @@ document.addEventListener('click', function () {
         "STOUT SHAKO FOR 2 REFINED",
         "продам гараж",
         ":D",
-        "Займись делом - растяни фимоz"
+        "Займись делом - растяни фимоz",
+        "put dispenser here",
+        "ты сделал достаточно",
+        "какпоставитьпробел?",
+        "суп существ",
+        "chaos insurgency incoming",
+        "ну тебе не стыдно?",
+        "!rtd",
+        "gcc test.c",
+        "stackoverflow",
+        "меня бесит этот зелёный цвет"
     ];
 
     let current_text_i = 0;
@@ -93,6 +103,7 @@ document.addEventListener('click', function () {
             const j = Math.floor(Math.random() * (i + 1));
             [silly_text[i], silly_text[j]] = [silly_text[j], silly_text[i]];
         }
+        console.log("перемешано");
     }
 
     function very_random(min, max) {
@@ -144,7 +155,7 @@ document.addEventListener('click', function () {
 })();
 
 setInterval(() => {
-    if (!clicked && Math.random() <= 0.2) {
+    if (!clicked && Math.random() <= 0.15) {
         clicked = true;
         makeGlitch();
         setTimeout(() => {
@@ -152,4 +163,4 @@ setInterval(() => {
             clicked = false;
         }, 150);
     }
-}, 1000);
+}, 1500);

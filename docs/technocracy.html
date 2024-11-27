@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/tech.css">
     <link rel="icon" type="image/gif" href="res/icon.gif">
-    <title>Ядерный мир победил</title>
+    <title>The Great Nuclear Novorossiya</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <audio id="music" preload="auto">
         <source src="res/techfun.wav" type="audio/mpeg">
     </audio>
-    <script>
+    <script defer>
         let ticks = 10;
         const text = 'нажми куда-нибудь';
         const buf = document.getElementById("request");
@@ -49,9 +49,12 @@
         }
         document.addEventListener('click', playsound);
         document.addEventListener('keypress', playsound);
-        audio.addEventListener('ended', function () {
-            audio.currentTime = 0;
-            audio.play();
+        audio.addEventListener('timeupdate', function () {
+            let buffer = .25 // самый лучший тайминг, который я мог подобрать
+            if (this.currentTime > this.duration - buffer) {
+                this.currentTime = 0
+                this.play()
+            }
         });
 
     </script>

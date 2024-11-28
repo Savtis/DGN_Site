@@ -11,3 +11,16 @@ function displayNextChar() {
     }
 }
 setInterval(displayNextChar, 800);
+
+function updateLine() {
+    const lineElement = document.getElementById('line');
+    const windowWidth = window.innerWidth;
+    const symbol = '=';
+    const symbolWidth = 10;
+
+    const numSymbols = Math.floor(windowWidth / symbolWidth);
+    lineElement.textContent = symbol.repeat(numSymbols);
+}
+
+updateLine();
+window.addEventListener('resize', updateLine);

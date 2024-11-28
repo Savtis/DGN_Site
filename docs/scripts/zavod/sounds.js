@@ -21,7 +21,7 @@ function load_sounds() {
         let buf = new SoundPack();
         buf.name = name;
         for (let i = 0; i < sound_count; i++) {
-            buf.sounds.push(new Audio(`/res/zavod/sound/${name}${i + 1}.wav`));
+            buf.sounds.push(new Audio(`res/zavod/sound/${name}${i + 1}.wav`));
         }
         sound_packs.push(buf);
     }

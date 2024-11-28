@@ -17,11 +17,12 @@ const sound_packs_names = ["fish", "fuel", "metal"];
 const sound_packs = [];
 
 function load_sounds() {
+    sound_packs.length = 0;
     for (const name of sound_packs_names) {
         let buf = new SoundPack();
         buf.name = name;
         for (let i = 0; i < sound_count; i++) {
-            buf.sounds.push(new Audio(`../../res/zavod/sound/${name}${i + 1}.wav`));
+            buf.sounds.push(new Audio(`res/zavod/sound/${name}${i + 1}.wav`));
         }
         sound_packs.push(buf);
     }

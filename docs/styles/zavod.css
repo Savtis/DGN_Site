@@ -14,7 +14,6 @@
 
 body {
     min-height: 100vh;
-    overflow: hidden;
     width: auto;
     display: flex;
     background-color: #fff0cf;
@@ -22,10 +21,12 @@ body {
 
 #left {
     min-width: 50%;
+    min-height: 100%;
 }
 
 #right {
     min-width: 50%;
+    min-height: 100%;
 }
 
 #game-logs {

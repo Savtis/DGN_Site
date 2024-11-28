@@ -1,5 +1,5 @@
 load_sounds();
 
 document.addEventListener('click', function () {
-    sound_packs[2].play_random();
+    get_sound('metal').play_random();
 });

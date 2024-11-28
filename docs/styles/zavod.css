@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'codefont';
+    src: url('../res/code.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'codemonofont';
+    src: url('../res/codemono.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    width: auto;
+    display: flex;
+    background-color: #fff0cf;
+}
+
+#left {
+    min-width: 50%;
+}
+
+#right {
+    min-width: 50%;
+}
+
+#game-logs {
+    padding: 5%;
+    min-height: 50%;
+    width: auto;
+    display: block;
+}
+
+#game-stats {
+    padding: 5%;
+    max-height: 30%;
+}
+
+#stats-content {
+    display: flex;
+}
+
+#stats-content-text {
+    display: flex;
+    font-family: codefont;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.2vw;
+    flex: 1 1 auto;
+}
+
+#stats-content img {
+    max-width: 20%;
+    height: auto;
+    object-fit: contain;
+}
+
+#game-text-logs {
+    padding: 5%;
+}
+
+#game-images {
+    min-height: 30%;
+}

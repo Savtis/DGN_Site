@@ -5,7 +5,14 @@
     font-style: normal;
 }
 
-html, body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
     cursor: url('../res/cursor.png'), auto;
 }
 
@@ -19,40 +26,47 @@ body {
     padding: 0px;
     background-color: black;
     color: lime;
+    font-size: 1.3em;
+}
+
+h1 {
+    margin: 1%;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
 }
 
 .gallery a {
-    margin: 0.6%;
-    max-width: 30%;
-    max-height: 40vh;
-    transition: transform 0.35s ease;
-    border-radius: 3%;
-    padding: 7px;
-    object-fit: contain;
-    display: block;
-    align-self: center;
-    background-color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: url('../res/cursor-click.png'), auto;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .gallery img {
-    max-height: 40vh;
-    transition: transform 0.35s ease;
-    border-radius: 3%;
-}
-
-.gallery img:hover {
-    border-radius: 0%;
+    width: 100%;
+    background-color: lime;
+    padding: 1.5%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
 }
 
 .gallery a:hover {
-    background-color: transparent;
-    transform: scale(1.1) translateY(-10px);
-    border-radius: 0%;
+    z-index: 11;
+    border-radius: 0;
+}
+
+.gallery img:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transform: scale(1.12) translateY(-12px);
+    border-radius: 0;
 }

@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Смена изображений</title>
-    <style>
-        #slideshow {
-            max-width: 600px; /* Задайте нужные размеры */
-            margin: auto;
-            position: relative;
-        }
-        #slideshow img {
-            width: 100%;
-            display: none; /* Скрываем все изображения по умолчанию */
-        }
-        #slideshow img.active {
-            display: block; /* Показываем активное изображение */
-        }
-    </style>
+    <title>Z.A.V.O.D.</title>
+    <link rel="stylesheet" type="text/css" href="styles/zavod.css">
+    <link rel="icon" type="image/gif" href="res/icon.gif">
 </head>
+
 <body>
+    <div id="left">
+        <div id="game-images">
 
-<div id="slideshow">
-    <img src="res/zavod/missle/frame0.png" alt="Изображение" class="active">
-    <img src="res/zavod/missle/frame1.png" alt="Изображение">
-    <img src="res/zavod/missle/frame2.png" alt="Изображение">
-    <img src="res/zavod/missle/frame3.png" alt="Изображение">
-</div>
+        </div>
+        <div id="game-logs">
+            <div id="game-stats">
+                <div id="stats-content">
+                    <img src="res/zavod/static/item_fish.png">
+                    <div id="stats-content-text">
+                        <p>кол-во: 23</p>
+                    </div>
+                </div>
+            </div>
+            <div id="game-text-logs">
 
-<script src="scripts/zavod/sounds.js"></script>
-<script src="scripts/zavod/main.js"></script>
+            </div>
+        </div>
+    </div>
+    <div id="right">
 
-<script>
+    </div>
 
-    let currentIndex = 0;
-    const images = document.querySelectorAll("#slideshow img");
-    const totalImages = images.length;
-
-    function showNextImage() {
-        images[currentIndex].classList.remove("active"); // Скрываем текущее изображение
-        currentIndex = (currentIndex + 1) % totalImages; // Вычисляем индекс следующего изображения
-        images[currentIndex].classList.add("active"); // Показываем следующее изображение
-    }
-
-    setInterval(showNextImage, 400);
-</script>
+    <script src="scripts/zavod/sounds.js"></script>
+    <script src="scripts/zavod/main.js"></script>
 
 </body>
+
 </html>

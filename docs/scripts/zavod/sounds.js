@@ -21,9 +21,27 @@ function load_sounds() {
         let buf = new SoundPack();
         buf.name = name;
         for (let i = 0; i < sound_count; i++) {
-            buf.sounds.push(new Audio(`/res/zavod/sound/${name}${i+1}.wav`));
+            buf.sounds.push(new Audio(`/res/zavod/sound/${name}${i + 1}.wav`));
         }
         sound_packs.push(buf);
     }
 }
 
+/**
+ * 
+ * @param {string} target 
+ * @returns {SoundPack}
+ * @throws {RangeError}
+ */
+function get_sound(target) {
+    var err_text = 'Такого типа звука нет';
+    if (!sound_packs_names.includes(target)) {
+        throw err_text;
+    }
+    for (const pack of sound_packs) {
+        if (pack.name == target) {
+            return pack;
+        }
+    }
+    throw err_text;
+}
